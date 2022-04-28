@@ -1,0 +1,58 @@
+package com.mycompany.aula02pratica;
+public class Aula02Pratica {
+
+    public static void main(String[] args) {
+        TV t1 = new TV();
+        t1.cor = "Preta";
+        t1.modelo = "SONY";
+        t1.polegadas = "50,0";
+        t1.ligar();
+        t1.status();
+        
+        TV t2 = new TV();
+        t1.cor = "Branca";
+        t1.modelo = "Samsung";
+        t1.polegadas = "100";
+        t1.desligar();
+        t1.ligar();
+        t1.desligar();
+        t1.status();
+                
+    }
+}
+package com.mycompany.aula02pratica;
+
+public class TV {
+    public String cor;
+    public String modelo;
+    public String polegadas;
+    private boolean ligada;
+    
+    public void status(){
+        System.out.println("Cor: " + this.cor);
+        System.out.println("Modelo: " + this.modelo);
+        System.out.println("Polegadas: " + this.polegadas);
+        System.out.println("A TV está ligada? " + this.ligada);
+    }
+    
+    public void assistir(){
+        if(this.ligada == true){
+            System.out.println("Posso assistir! ");
+        }else{
+            System.out.println("Erro! não posso assistir");
+        }
+            
+    }
+    
+    public void ligar(){
+        this.ligada = true;
+    }
+    
+    public void desligar(){
+        this.ligada = false;
+    }
+
+}
+    
+
+
